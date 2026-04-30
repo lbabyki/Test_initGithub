@@ -1,0 +1,30 @@
+import random
+import statistics
+import math
+import string
+d=input("Vui lòng nhập mật khẩu: ")
+b=[]
+kho=""
+for i in range(20): 
+    a= random.randint(1,100)
+    b.append(a)
+print(f"Danh sách: {b}")
+print(f"Trung bình: {statistics.mean(b)}")
+print(f"Median: {statistics.median(b)}")
+
+print(f"Căn bậc hai của trung bình: {math.sqrt(statistics.mean(b))}")
+print(f"Ceil: {math.ceil(math.sqrt(statistics.mean(b)))}")
+print(f"Floor: {math.floor(math.sqrt(statistics.mean(b)))}")
+q= any(c.isdigit() for c in d)
+w= any(c.isalpha() for c in d)
+e= any(c in string.punctuation for c in d)
+if q==w==e==True and len(d)>=10:
+    print("Mật khẩu mạnh.")
+else:
+    print("Mật khẩu yếu. ")
+
+p= string.ascii_letters + string.digits + string.punctuation
+for e in range(20):
+    s=random.choice(p)
+    kho+=s
+print(f"Mật khẩu gợi ý: {kho}")

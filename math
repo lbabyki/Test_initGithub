@@ -1,0 +1,8 @@
+import random
+import string
+mk= ""
+kho= string.ascii_letters+string.digits
+a= int(input("Vui long nhap so ki tu mat khau: "))
+for i in range(a):
+    mk=mk + random.choice(kho)
+print(f"Mat khau ban la {mk}")

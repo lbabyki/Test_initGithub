@@ -1,0 +1,15 @@
+import string
+a= input("Vui long nhap mat ma cua ban: ")
+A= False
+B= False
+for i in a:
+    if i in string.ascii_letters:
+        A= True
+    if i in string.digits:
+        B= True
+if A == True and B == False:
+    print("Mat ma cua ban chi bao gom chu.")
+elif A == False and B == True:
+    print("Mat ma cua ban chi bao gom so.")
+else:
+    print("Mat ma cua ban bao gom ca chu va so.")
